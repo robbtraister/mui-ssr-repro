@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "composite": true, // https://www.typescriptlang.org/docs/handbook/project-references.html#composite
+    "declaration": true,
+    "declarationMap": true,
+    "emitDecoratorMetadata": true,
+    "erasableSyntaxOnly": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2019"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "outDir": "./.tsc",
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "rootDirs": [
+      ".",
+      "./.react-router/types"
+    ],
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "sourceRoot": "./",
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "ESNext",
+    "types": [
+      "@react-router/node",
+      "vite/client"
+    ],
+  },
+  "include": [
+    "./**/*",
+    "./**/*.json",
+    "./**/.*/**/*",
+    "./**/.*/**/*.json"
+  ],
+  "exclude": [
+    "**/.*cache",
+    "**/.git*",
+    "**/.tsc",
+    "**/build",
+    "**/dist",
+    "**/node_modules",
+    "**/public"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "mui-ssr-repro",
+  "version": "1.0.0",
+  "type": "module",
+  "packageManager": "yarn@4.9.1",
+  "engines": {
+    "node": "22.14.0"
+  },
+  "scripts": {
+    "clean": "sh -c 'rm -rf build/*'",
+    "dev": "yarn run clean && react-router dev",
+    "postinstall": "patch-package",
+    "typecheck": "yarn run typegen && tsc --build",
+    "typegen": "react-router typegen"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.1.1",
+    "@mui/material": "^7.1.1",
+    "@react-router/dev": "^7.6.1",
+    "@react-router/express": "^7.6.1",
+    "@react-router/fs-routes": "^7.6.1",
+    "@react-router/node": "^7.6.1",
+    "isbot": "^5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.6.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-typescript": "^7.27.1",
+    "@emotion/babel-plugin": "^11.13.5",
+    "@react-router/dev": "^7.6.1",
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.29",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^4.5.0",
+    "patch-package": "^8.0.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-babel": "^1.3.1"
+  }
+}
