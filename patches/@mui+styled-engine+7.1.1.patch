@@ -1,0 +1,26 @@
+diff --git a/node_modules/@mui/styled-engine/StyledEngineProvider/StyledEngineProvider.js b/node_modules/@mui/styled-engine/StyledEngineProvider/StyledEngineProvider.js
+index e4c2fbe..8fd7bf9 100644
+--- a/node_modules/@mui/styled-engine/StyledEngineProvider/StyledEngineProvider.js
++++ b/node_modules/@mui/styled-engine/StyledEngineProvider/StyledEngineProvider.js
+@@ -109,7 +109,7 @@ function StyledEngineProvider(props) {
+   } = props;
+   const cache = React.useMemo(() => {
+     const cacheKey = `${injectFirst}-${enableCssLayer}`;
+-    if (cacheMap.has(cacheKey)) {
++    if (typeof document === 'object' && cacheMap.has(cacheKey)) {
+       return cacheMap.get(cacheKey);
+     }
+     const fresh = getCache(injectFirst, enableCssLayer);
+diff --git a/node_modules/@mui/styled-engine/esm/StyledEngineProvider/StyledEngineProvider.js b/node_modules/@mui/styled-engine/esm/StyledEngineProvider/StyledEngineProvider.js
+index 40e3dda..7810904 100644
+--- a/node_modules/@mui/styled-engine/esm/StyledEngineProvider/StyledEngineProvider.js
++++ b/node_modules/@mui/styled-engine/esm/StyledEngineProvider/StyledEngineProvider.js
+@@ -102,7 +102,7 @@ export default function StyledEngineProvider(props) {
+   } = props;
+   const cache = React.useMemo(() => {
+     const cacheKey = `${injectFirst}-${enableCssLayer}`;
+-    if (cacheMap.has(cacheKey)) {
++    if (typeof document === 'object' && cacheMap.has(cacheKey)) {
+       return cacheMap.get(cacheKey);
+     }
+     const fresh = getCache(injectFirst, enableCssLayer);
